@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${messenger.datasource.driver-class-name}
+      url: jdbc:mysql://${messenger.datasource.host}:${messenger.datasource.port}/${messenger.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${messenger.datasource.username}
+      password: ${messenger.datasource.password}
+#  redis:
+#    host: ${messenger.redis.host}
+#    port: ${messenger.redis.port}
+#    password: ${messenger.redis.password}
+#    database: ${messenger.redis.database}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      messenger:
+        mapper: debug
+        service: info
+        controller: info
+
+messenger:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    user-secret-key: itcast
+    # 设置jwt过期时间
+    user-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    user-token-name: token
+  alioss:
+    endpoint: ${messenger.alioss.endpoint}
+    access-key-id: ${messenger.alioss.access-key-id}
+    access-key-secret: ${messenger.alioss.access-key-secret}
+    bucket-name: ${messenger.alioss.bucket-name}

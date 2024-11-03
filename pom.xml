@@ -3,11 +3,11 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>top.bgmgm1</groupId>
-	<artifactId>data_analysis</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>messenger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>data_analysis</name>
-	<description>data_analysis</description>
+	<name>messenger</name>
+	<description>messenger</description>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -18,9 +18,9 @@
 	</parent>
 
 	<modules>
-		<module>da_common</module>
-		<module>da_pojo</module>
-		<module>da_server</module>
+		<module>messenger_common</module>
+		<module>messenger_pojo</module>
+		<module>messenger_server</module>
 	</modules>
 
 	<properties>
@@ -29,6 +29,11 @@
 		<fastjson>1.2.76</fastjson>
 		<commons.lang>2.6</commons.lang>
 		<knife4j>3.0.2</knife4j>
+		<jjwt>0.9.1</jjwt>
+		<mysql>8.0.33</mysql>
+		<aliyun.sdk.oss>3.10.2</aliyun.sdk.oss>
+		<jaxb-api>2.3.1</jaxb-api>
+		<druid>1.2.1</druid>
 	</properties>
 
 	<dependencyManagement>
@@ -62,6 +67,36 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>${jjwt}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.mysql</groupId>
+				<artifactId>mysql-connector-j</artifactId>
+				<version>${mysql}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>${aliyun.sdk.oss}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>${jaxb-api}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid}</version>
 			</dependency>
 
 		</dependencies>
