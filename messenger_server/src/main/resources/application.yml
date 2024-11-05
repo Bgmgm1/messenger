@@ -7,11 +7,11 @@ spring:
   main:
     allow-circular-references: true
   datasource:
-    druid:
       driver-class-name: ${messenger.datasource.driver-class-name}
       url: jdbc:mysql://${messenger.datasource.host}:${messenger.datasource.port}/${messenger.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${messenger.datasource.username}
       password: ${messenger.datasource.password}
+      type: com.alibaba.druid.pool.DruidDataSource
 #    redis:
 #      host: ${messenger.redis.host}
 #      port: ${messenger.redis.port}
