@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
-import javax.security.auth.login.AccountLockedException;
 
 @Service
 public class UserServiceImpl implements UserService {

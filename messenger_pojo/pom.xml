@@ -3,9 +3,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>messenger_pojo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>messenger_pojo</name>
-    <description>messenger_pojo</description>
 
     <parent>
         <groupId>com.example</groupId>
@@ -23,6 +20,12 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.4.2</version>
         </dependency>
 
     </dependencies>

@@ -6,15 +6,12 @@
 	<groupId>com.example</groupId>
 	<artifactId>messenger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>messenger</name>
-	<description>messenger</description>
 	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
-		<relativePath/>
+		<version>2.7.3</version>
 	</parent>
 
 	<modules>
@@ -30,7 +27,6 @@
 		<commons.lang>2.6</commons.lang>
 		<knife4j>3.0.2</knife4j>
 		<jjwt>0.9.1</jjwt>
-		<mysql>8.0.33</mysql>
 		<aliyun.sdk.oss>3.10.2</aliyun.sdk.oss>
 		<jaxb-api>2.3.1</jaxb-api>
 		<druid>1.2.1</druid>
@@ -73,12 +69,6 @@
 				<groupId>io.jsonwebtoken</groupId>
 				<artifactId>jjwt</artifactId>
 				<version>${jjwt}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.mysql</groupId>
-				<artifactId>mysql-connector-j</artifactId>
-				<version>${mysql}</version>
 			</dependency>
 
 			<dependency>
